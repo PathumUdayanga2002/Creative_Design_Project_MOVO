@@ -1,12 +1,10 @@
 import React from "react";
-import Home from '../src/components/Home/Home';
+import PresenterDashBoard from "./components/PresenterDashboard/PresenterDashBoard";
 
 const App = () => {
-  return (
-  <>
-    <Home/>    
-  </>
-    )
+  return <div>
+    <PresenterDashBoard/>
+  </div>;
 };
 
 export default App;

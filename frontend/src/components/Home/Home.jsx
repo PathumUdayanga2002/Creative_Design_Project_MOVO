@@ -37,40 +37,51 @@ const Home = () => {
         </section>
       </div>
 
-      {/* Guider and Presenter Section */}
-      <div className="min-h-screen flex flex-col items-center bg-gray-100 bg-no-repeat w-full">
-        <section className="mt-16 flex flex-col items-center">
-          <div className="flex flex-row items-start space-x-16">
-            {/* Guider */}
-            <div className="flex items-center space-x-6">
-              <div className="w-40 h-40 bg-orange-200 flex items-center justify-center rounded-lg shadow-lg">
-                <img src={guider} alt="Guider" className="w-full h-full object-cover rounded-lg" />
-              </div>
-              <div className="text-left">
-                <h3 className="font-bold text-lg">Guider</h3>
-                <p className="text-gray-600 mt-2 max-w-xs">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-                </p>
-              </div>
-            </div>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
 
-            {/* Presenter */}
-            <div className="flex items-center space-x-6">
-              <div className="w-40 h-40 bg-yellow-200 flex items-center justify-center rounded-lg shadow-lg">
-                <img src={student} alt="Presenter" className="w-full h-full object-cover rounded-lg" />
-              </div>
-              <div className="text-left">
-                <h3 className="font-bold text-lg">Presenter</h3>
-                <p className="text-gray-600 mt-2 max-w-xs">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-                </p>
-              </div>
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 space-y-12">
+         {/* Guider Section */}
+         <div className="flex items-start justify-between w-full max-w-screen-lg mx-auto mb-12">
+           {/* Guider Image */}
+           <div className="w-56 h-56 rounded-lg overflow-hidden">
+             <img src={guider} alt="Guider" className="w-full h-full object-cover" />
+           </div>
+           {/* Guider Text */}
+           <div>
+             <h3 className="text-lg font-bold mb-2">Guider</h3>
+             <div className="bg-white p-4 shadow-lg rounded-lg max-w-xs">
+               <p className="text-gray-600">
+                 Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+               </p>
+             </div>
+           </div>
+         </div>
+
+         {/* Arrow Icon */}
+         <div>
+           <IoArrowForwardCircleOutline size={36} className="text-gray-400" />
+         </div>
+
+         {/* Presenter Section */}
+       <div className="flex flex-row-reverse items-center space-x-6">
+          {/* Presenter Image */}
+          <div className="w-60 h-56 rounded-lg overflow-hidden">
+            <img src={student} alt="Presenter" className="w-full h-full object-cover" />
+          </div>
+          {/* Presenter Text */}
+          <div>
+            <h3 className="text-lg font-bold mb-2">Presenter</h3>
+            <div className="bg-white p-4 shadow-lg rounded-lg max-w-xs">
+              <p className="text-gray-600">
+                Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+              </p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+     </div>
+    </div>
     </>
   );
-}
+};
 
 export default Home;

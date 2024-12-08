@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../assets/images/profile.jpg";
+import profile from "../../assets/images/Linkdln Profile.png";
 import aipower from "../../assets/images/aipower.png";
 
 
@@ -13,7 +13,7 @@ const Header = () => {
           alt="profile logo"
         />
         <div className="flex flex-col space-y-2 mt-2 w-[200px] ">
-          <h1 className="text-sm ">Hi, Pathum Udayanga</h1>
+          <h1 className="text-sm ">Hi, Dimuthu Lakmal</h1>
           <h1 className="text-sm ">Welcome Back to</h1>
           <h1 className="text-4xl font-bold text-orange-600 ">MOVO</h1>
         </div>

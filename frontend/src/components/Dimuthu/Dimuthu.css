@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+background: rgb(173, 159, 199);
+width: 100vw;
+height: 100vh;
+}
+
+.logo{
+    width: 10%;
+    padding: 5px;
+}

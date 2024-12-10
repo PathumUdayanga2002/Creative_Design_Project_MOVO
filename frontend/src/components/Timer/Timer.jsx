@@ -1,33 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import io from 'socket.io-client';
+import React, { useEffect, useState } from "react";
+import io from "socket.io-client";
 
-const socket = io('http://localhost:5000');
+const socket = io("http://localhost:5000"); // Ensure the URL is correct
+
 
 const Timer = () => {
   const [timeLeft, setTimeLeft] = useState(0);
 
   useEffect(() => {
-    socket.on('timerUpdate', (newTime) => {
+    // Listen for timer updates
+    socket.on("timerUpdate", (newTime) => {
       setTimeLeft(newTime);
     });
 
-    socket.on('timerStopped', () => {
+    // Listen for timer stop event
+    socket.on("timerStopped", () => {
       setTimeLeft(0);
     });
 
-    return () => socket.off(); // Cleanup
+    return () => {
+      socket.off("timerUpdate");
+      socket.off("timerStopped");
+    };
   }, []);
 
-  const startTimer = () => socket.emit('startTimer');
-  const stopTimer = () => socket.emit('stopTimer');
-  const resetTimer = () => socket.emit('resetTimer');
-  const adjustTimer = (newDuration) => socket.emit('adjustTimer', newDuration);
+  const startTimer = () => socket.emit("startTimer");
+  const stopTimer = () => socket.emit("stopTimer");
+  const resetTimer = () => socket.emit("resetTimer");
+  const adjustTimer = (newDuration) => socket.emit("adjustTimer", newDuration);
 
-  // Convert timeLeft (in seconds) to minutes and seconds
+  // Convert seconds to minutes and seconds
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
 
-  // Format time to always show 2 digits
   const formatTime = (value) => (value < 10 ? `0${value}` : value);
 
   return (

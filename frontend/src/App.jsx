@@ -1,13 +1,14 @@
 import React from "react";
-import PresenterDashBoard from "./components/PresenterDashboard/PresenterDashBoard";
-import Dimuthu from "./components/Dimuthu/dimuthu";
-import Header from "./components/Header/Header";
 import HeaderAdmin from "./components/HeaderAdmin/HeaderAdmin";
+import AsideMenu from "./components/asideAdmin/asideAdmin";
 
 const App = () => {
-  return <div>
-    <HeaderAdmin/>
-  </div>;
+  return (
+    <div>
+      <HeaderAdmin />
+      <AsideMenu />
+    </div>
+  );
 };
 
 export default App;

@@ -1,14 +1,18 @@
 import React from "react";
 import HeaderAdmin from "./components/HeaderAdmin/HeaderAdmin";
 import AsideMenu from "./components/AsideMenu/AsideMenu";
-import DashboardCards from "./components/DashboardCards/DashboardCards";
+import Dashboard from "./components/Dashboard/Dashboard";
+
 
 const App = () => {
   return (
-    <div>
-      <HeaderAdmin />
-      <AsideMenu />
-      <DashboardCard />    </div>
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <HeaderAdmin/>
+      <div style={{ display: "flex" }}>
+        <AsideMenu/>
+        <Dashboard/>
+      </div>
+    </div>
   );
 };
 

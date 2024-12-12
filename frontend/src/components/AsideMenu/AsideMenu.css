@@ -32,10 +32,8 @@
     color: #000000;
   }
 
-    /* .menu-section ul li:hover {
-        background-color: #F6EDED;
-    } */
-    .menu-section ul li:active{
+  
+    .menu-section ul li:active {
       background-color: #F6EDED;
     }
    .menu-section ul li img.icon {

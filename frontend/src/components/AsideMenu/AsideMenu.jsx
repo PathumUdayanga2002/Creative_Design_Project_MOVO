@@ -1,5 +1,5 @@
 import React from 'react';
-import './asideAdmin.css';
+import './AsideMenu.css';
 import Dashboard from '../../assets/images/dashboard.svg';
 import Calendar from '../../assets/images/calender.svg';
 import Notification from '../../assets/images/notification.svg';

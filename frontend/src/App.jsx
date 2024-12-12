@@ -1,13 +1,14 @@
 import React from "react";
 import HeaderAdmin from "./components/HeaderAdmin/HeaderAdmin";
-import AsideMenu from "./components/asideAdmin/asideAdmin";
+import AsideMenu from "./components/AsideMenu/AsideMenu";
+import DashboardCards from "./components/DashboardCards/DashboardCards";
 
 const App = () => {
   return (
     <div>
       <HeaderAdmin />
       <AsideMenu />
-    </div>
+      <DashboardCard />    </div>
   );
 };
 

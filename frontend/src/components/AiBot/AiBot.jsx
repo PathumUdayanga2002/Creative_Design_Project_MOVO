@@ -84,12 +84,12 @@ const AiBot = () => {
           </div>
         )}
 
-        {feedback && (
+        {/* {feedback && (
           <div className="mt-4 p-4 bg-blue-50 rounded-lg shadow-md text-gray-800">
             <h3 className="text-lg font-medium">AI Feedback</h3>
             <p className="mt-2">{feedback}</p>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

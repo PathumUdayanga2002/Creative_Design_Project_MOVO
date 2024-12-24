@@ -9,12 +9,11 @@ require('dotenv').config();
 const app = express();
 const port = 5000;
 
-// Load API keys from environment variables
+// Load AssemblyAI API key from environment variables
 const ASSEMBLYAI_API_KEY = process.env.ASSEMBLYAI_API_KEY;
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-if (!ASSEMBLYAI_API_KEY || !OPENAI_API_KEY) {
-  console.error('Error: Missing API keys. Ensure ASSEMBLYAI_API_KEY and OPENAI_API_KEY are set in your .env file.');
+if (!ASSEMBLYAI_API_KEY) {
+  console.error('Error: Missing ASSEMBLYAI_API_KEY. Ensure it is set in your .env file.');
   process.exit(1);
 }
 
@@ -27,7 +26,7 @@ app.use(cors({
 // Multer setup for handling file uploads
 const upload = multer({ dest: 'uploads/' });
 
-app.post('/api/analyze', upload.single('audio'), async (req, res) => {
+app.post('/api/transcribe', upload.single('audio'), async (req, res) => {
   const filePath = path.join(__dirname, req.file.path);
 
   if (!req.file) {
@@ -81,32 +80,12 @@ app.post('/api/analyze', upload.single('audio'), async (req, res) => {
       }
     }
 
-    // Step 4: Send transcript to ChatGPT for analysis
-    const gptResponse = await axios.post(
-      'https://api.openai.com/v1/chat/completions',
-      {
-        model: 'gpt-3.5-turbo',
-        messages: [
-          { role: 'system', content: 'You are an assistant providing feedback on presentation skills based on the given text.' },
-          { role: 'user', content: transcriptText },
-        ],
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${OPENAI_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-
-    const feedback = gptResponse.data.choices[0].message.content;
-
-    // Step 5: Return feedback to the frontend
-    res.json({ transcript: transcriptText, feedback });
+    // Step 4: Return transcript to the frontend
+    res.json({ transcript: transcriptText });
 
   } catch (error) {
     console.error('Error:', error.message || error);
-    res.status(500).json({ error: 'Error processing the audio file or generating feedback.' });
+    res.status(500).json({ error: 'Error processing the audio file.' });
   } finally {
     // Clean up uploaded file
     try {

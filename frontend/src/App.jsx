@@ -13,6 +13,7 @@ import Login from "./components/Login/Login";
 import GoogleCalende from "./components/GoogleCalender/GoogleCalende";
 import Events from "./components/events/events";
 import MyCalendar from "./components/MyCalendar/MyCalendar";
+import AiBot from "./components/AiBot/AiBot";
 
 const App = () => {
 
@@ -24,7 +25,7 @@ const App = () => {
     <PresenterDashBoard/> */}
     {/* <GoogleCalende/>
     <Events/> */}
-    
+    <AiBot/>
 
 <Router>
   <Routes>

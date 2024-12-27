@@ -1,5 +1,5 @@
 .aside-menu {
-    width: 400px;
+    width: 370px;
     height: 830px;
     background-color: #ffffff;
     padding: 20px 0 0 50px;
@@ -9,7 +9,9 @@
   .menu-section {
     margin-bottom: 20px;
   }
-  
+  .menu-section ul::after {
+    background-color: orange;
+  }
   .menu-section h3 {
     font-size: 32px;
     font-weight: 600;

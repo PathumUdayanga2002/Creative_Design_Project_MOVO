@@ -15,8 +15,8 @@ const AsideMenu = () => {
     <aside className="aside-menu">
       <div className="menu-section">
         <h3>Main Menu</h3>
-        <ul>
-          <li className="active"><img className="icon" src={Dashboard} alt="Dashboard" /> Dashboard</li>
+        <ul className="active">
+          <li><img className="icon" src={Dashboard} alt="Dashboard" /> Dashboard</li>
           <li><img className="icon" src={Calendar} alt="Calendar" /> Calendar</li>
           <li><img className="icon" src={Notification} alt="Notification" /> Notification</li>
           <li><img className="icon" src={Presentation} alt="Presentation" /> Presenters</li>

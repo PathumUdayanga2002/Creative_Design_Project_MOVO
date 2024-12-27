@@ -1,13 +1,10 @@
 import React from "react";
-import Dimuthu from "./components/Dimuthu/Dimuthu";
-import StudentList from "./components/StudentList.jsx/StudentList";
+import PresenterDashBoard from "./components/PresenterDashboard/PresenterDashBoard";
 
 const App = () => {
-  return (
-    <div>
-    <Dimuthu/>
-    </div>
-  );
+  return <div>
+    <PresenterDashBoard/>
+  </div>;
 };
 
 export default App;

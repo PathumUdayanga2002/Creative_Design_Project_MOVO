@@ -9,8 +9,19 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { RiDashboardFill } from "react-icons/ri";
+import { Link, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    // Clear authentication data from localStorage
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    localStorage.removeItem("name");
+    alert("logout successfully");
+    // Redirect to login page
+    navigate("/");
+  };
   return (
     <div className="w-72 bg-white p-4 px-16 shadow-lg h-screen  font-poppins">
       <h2 className="text-5xl font-bold text-orange-500">MOVO</h2>
@@ -20,9 +31,14 @@ const Sidebar = () => {
           <li className="flex items-center text-gray-700/90 ">
             <RiDashboardFill className="mr-2" /> Dashboard
           </li>
-          <li className="flex items-center text-gray-700/90">
-            <FaCalendar className="mr-2" /> Calendar
-          </li>
+          <Link to={"/calendar"}>
+            {" "}
+            <li className="flex items-center text-gray-700/90 cursor-pointer">
+              {" "}
+              <FaCalendar className="mr-2" /> Calendar
+              {""}
+            </li>{" "}
+          </Link>{" "}
           <li className="flex items-center text-gray-700/90">
             <FaBell className="mr-2" /> Notifications
           </li>
@@ -38,7 +54,10 @@ const Sidebar = () => {
           <li className="flex items-center text-gray-700">
             <FaCog className="mr-2" /> Settings
           </li>
-          <li className="flex items-center text-gray-700">
+          <li
+            onClick={handleLogout}
+            className="flex items-center text-gray-700 cursor-pointer"
+          >
             <FaSignOutAlt className="mr-2" /> Log Out
           </li>
           <li className="flex items-center text-gray-700">

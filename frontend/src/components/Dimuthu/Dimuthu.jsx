@@ -4,6 +4,7 @@ import AsideMenu from '../AsideMenu/AsideMenu'
 import Dashboard from '../Dashboard/Dashboard'
 import StudentList from '../StudentList.jsx/StudentList'
 import AsideRight from '../AsideRight/AsideRight'
+import MyCalendar from '../MyCalendar/MyCalendar'
 
 export default function Dimuthu() {
   return (
@@ -13,6 +14,7 @@ export default function Dimuthu() {
         <AsideMenu/>
         <Dashboard/>
         <AsideRight/>
+        <MyCalendar/>
       </div>
       {/* <StudentList/> */}
     </div>

@@ -1,21 +1,24 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.menu-right{
+.menu-right {
+  display: grid;
+  justify-content: space-around;
+}
+.menu-grid {
+  display: flex;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  justify-items: center;
+  align-items: center;
+}
 
-        width: 370px;
-        height: 830px;
-        background-color: #030f44;
-        /* padding: 20px 50px 0 50px; */
-}
-.menu-grid{
-    background-color: aliceblue;
-   justify-items: center;
-}
-.menu-grid h1{
-    font-size: 30px;
-    font-weight: 700;
+.menu-grid span {
+  word-break: break-all;
+  font-size: 30px;
+  font-weight: 700;
+  word-break: break-all;
 }

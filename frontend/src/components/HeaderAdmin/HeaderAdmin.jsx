@@ -5,14 +5,10 @@ const HeaderAdmin = () => {
     return (
         <header className="header-admin">
             <h1 style={{ fontWeight: 'bold', color: '#FF5F15', fontSize: '50px' }}>MOVO</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <img src="src\assets\images\Linkdln Profile.png" alt="Profile" className="profile-pic" />
-                        <a href="/dashboard">dimuthu_lk</a>
-                    </li>
-                </ul>
-            </nav>
+                       <nav>
+                       <img src="src\assets\images\Linkdln Profile.png" alt="Profile" className="profile-pic" />
+                       <a href="/dashboard">dimuthu_lk</a>
+                        </nav> 
         </header>
     );
 };

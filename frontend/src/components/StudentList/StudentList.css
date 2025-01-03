@@ -1,0 +1,35 @@
+.student-list-container {
+  display: inline-grid;
+  background-color: #F6EDED;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.student-list-container h1 {
+  text-align: left;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table thead th {
+  text-align: left;
+  padding: 12px;
+  background-color: #ddd;
+  color: #555;
+}
+
+.student-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+}
+
+.student-table tbody tr:hover {
+  background-color: #f1f1f1;
+}

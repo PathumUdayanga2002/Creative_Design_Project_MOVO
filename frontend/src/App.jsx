@@ -1,11 +1,11 @@
 import React from "react";
-import PresenterDashBoard from "./components/PresenterDashboard/PresenterDashBoard";
 import Dimuthu from "./components/Dimuthu/Dimuthu";
+import StudentList from "./components/StudentList/StudentList";
 
 const App = () => {
-  return <div>
+  return <>
     <Dimuthu/>
-  </div>;
+  </>;
 };
 
 export default App;

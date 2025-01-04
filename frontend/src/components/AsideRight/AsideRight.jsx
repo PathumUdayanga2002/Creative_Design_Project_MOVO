@@ -14,6 +14,7 @@ return (
         <span style={{ color: 'orange', fontSize:40 }}>50</span>
     </div>
     <div className="menu-grid">
+      <span>Schedule</span>
        <MyCalendar/>
     </div>
  </div>

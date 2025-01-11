@@ -14,6 +14,8 @@ import Login from "./components/Login/Login";
 import MyCalendar from "./components/MyCalendar/MyCalendar";
 import PresenterDashBoard from "./components/PresenterDashboard/PresenterDashBoard";
 import UserCountdown from "./Presenter/UserCountdown/UserCountdown";
+import Upload from "./components/Upload/Upload";  
+//import Upload from "./components/Upload/Upload.css";
 
 const App = () => {
   const isAuthenticated = () => !!localStorage.getItem("token");
@@ -65,6 +67,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>
+      <Upload/>
 
     
     </div>

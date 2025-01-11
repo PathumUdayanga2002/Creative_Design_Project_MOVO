@@ -1,0 +1,104 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f9f9f9;
+  }
+  
+  /* Layout */
+  .main-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar,
+  .right-sidebar {
+    background-color: #fff;
+    padding: 20px;
+    min-width: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar h1.logo {
+    color: #ff6600;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 15px 0;
+  }
+  
+  .other-menu {
+    margin-top: 40px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f3f4f6;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  .highlight-text {
+    color: #ff6600;
+  }
+  
+  .upload-section {
+    margin-top: 20px;
+  }
+  
+  .upload-card {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .upload-icon {
+    font-size: 40px;
+    color: #ccc;
+  }
+  
+  .upload-card textarea {
+    width: 80%;
+    height: 60px;
+    margin: 10px 0;
+  }
+  
+  .upload-btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .stats {
+    margin-bottom: 20px;
+  }
+  
+  .stats p {
+    font-size: 24px;
+    color: #ff6600;
+  }
+  
+  .calendar {
+    text-align: center;
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  

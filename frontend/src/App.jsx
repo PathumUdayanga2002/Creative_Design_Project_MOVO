@@ -65,11 +65,11 @@ const App = () => {
           <Route path="/register-admin" element={<SignInAdmin />} />
           <Route path="/register-presenter" element={<SigninPresenter />} />
           <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/" />} />
         </Routes>
       </Router>
       <Upload/>
 
-    
     </div>
   );
 };

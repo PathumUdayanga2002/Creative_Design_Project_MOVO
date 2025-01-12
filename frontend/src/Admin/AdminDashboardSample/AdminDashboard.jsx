@@ -52,7 +52,7 @@ const AdminDashboard = () => {
               <div className="p-4 bg-white shadow shadow-orange-600 rounded-xl h-[150px] ">
                 <div className="flex flex-row gap-2">
                   {/* paragraph and topic */}
-                  <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-4" >
                     <h1 className=" text-xl font-semibold">Upload Details</h1>
                     <p className=" text-sm text-gray-600">
                       Upload your presentation details (group detais,

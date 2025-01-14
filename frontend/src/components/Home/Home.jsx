@@ -61,9 +61,8 @@ const Home = () => {
           Make Your Presentation <br /> Management{" "}
           <span className="text-orange-500">Easier</span>
         </h1>
-        <p className="text-gray-600 mb-8 max-w-md">
-          Maneesha Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis.
+        <p className="text-gray-600 mb-8 max-w-md font-bold">
+        Streamline your presentation process with ease and confidence. Our tool offers a seamless way to manage, track, and optimize your presentations, ensuring you stay organized and prepared for every session.
         </p>
         <button className="flex items-center px-6 py-3 bg-orange-500 shadow-lg shadow-gray-500/40 text-white text-lg font-bold rounded-lg hover:bg-orange-600 transition duration-300 space-x-2">
           <span>Presentation Guide</span>
